@@ -3,6 +3,8 @@ const formDiv = document.querySelector(".form-div");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector("#close");
 const ctx = document.getElementById('cashFlowChart');
+const settings = document.querySelector(".settings-tab");
+
 
 
 let Form_button_Functions = ()=>{
@@ -62,3 +64,15 @@ new Chart(ctx, {
         }
     }
 });
+
+function selectDashboard() {
+    document.getElementById("Dashboard").classList.add("active");
+    document.getElementById("Settings").classList.remove("active");
+    settings.style.display ="none";
+}
+
+function selectSettings() {
+    document.getElementById("Settings").classList.add("active");
+    document.getElementById("Dashboard").classList.remove("active");
+    settings.style.display ="flex";
+}

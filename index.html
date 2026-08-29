@@ -29,8 +29,15 @@
                 </div>
 
                 <div class="components">
-                    <h1><i class="ri-layout-grid-line"></i>  Dashboard</h1>
-                    <h1><i class="ri-settings-2-line"></i>  Settings</h1>
+                    <h1 id="Dashboard" class="active"  onclick="selectDashboard()">
+                     <i class="ri-layout-grid-line"></i>
+                      Dashboard
+                    </h1>
+
+                    <h1 id="Settings" onclick="selectSettings()">
+                      <i class="ri-settings-2-line"></i>
+                      Settings
+                    </h1>
                 </div>
 
                 <div class="transaction">
@@ -129,14 +136,59 @@
         <div class="Transactions-tab">
             <h1>All Transactions</h1>
             <div class="transaction-text">
-            <input type="text"  placeholder="Search Transactions">
+              <input type="text"  placeholder="Search Transactions">
 
-             <select>
+              <select>
                 <option>All Types</option>
                 <option>Income Only </option>
                 <option>Expense Only</option>
-             </select>
+              </select>
+            </div>
 
+            <div class="filters">
+
+                <div class="Date">
+                    <h4>DATE</h4>
+                </div>
+                <div class="Description">
+                    <h4>DESCRIPTION</h4>
+                </div>
+                <div class="Category">
+                   <h4>CATEGORY</h4>
+                </div>
+                <div class="Amount">
+                    <h4>AMOUNT</h4>
+                </div>
+                <div class="Actions">
+                    <h4>ACTIONS</h4>
+                </div>
+
+             </div>
+
+        </div>
+
+        <div class="settings-tab">
+            <div class="settings-top">
+                <h1>Settings</h1>
+                <p>Manage your account profile and app formatting.</p>
+            </div>
+
+            <div class="profile-details">
+                <h1>Profile Details</h1>
+                <div class="profile-fields">
+                    <h4>Full Name</h4>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="profile-fields">
+                    <h4>Primary Currency</h4>
+                    <select>
+                        <option>USD($)</option>
+                        <option>EUR(€)</option>
+                        <option>GBP(£)</option>
+                        <option>INR(₹)</option>
+                        <option>JPY(¥)</option>
+                    </select>
+                </div>
             </div>
         </div>
 
