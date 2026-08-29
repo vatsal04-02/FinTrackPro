@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />   
+
+</head>
+<body>
+
+    <main>
+        <div class="navbar">
+            <nav class="topbar">
+                <h2>Username</h2>
+                <button><i class="ri-logout-box-r-line"></i>Logout</button>
+            </nav>
+        </div>
+
+        <div class="sidebar">
+            <aside class="side">
+                <div class="logo">
+                    <img src="./stack-fill (1).svg">
+                    <div class="logo-text">
+                        <h1>FinTrack Pro</h1>
+                        <p>Enterprise Finance</p>
+                    </div>
+                </div>
+
+                <div class="components">
+                    <h1><i class="ri-layout-grid-line"></i>  Dashboard</h1>
+                    <h1><i class="ri-settings-2-line"></i>  Settings</h1>
+                </div>
+
+                <div class="transaction">
+                    <button id="addBtn">+ Add Transaction</button>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="form-div">
+            <form>
+                <div class="top">
+                    <h1 id="head">Add Transaction</h1>
+                    <h1 id="close">x</h1>
+                </div>
+
+
+                <h4>Type</h4>
+                <select>
+                    <option>Income</option>
+                    <option>Expense</option>
+                </select>
+
+                <h4>Description</h4>
+                <input type="text" placeholder="Description">
+
+
+                
+                <div class="sidebyside">
+                    <div class="form-group">
+                     <h4>Amount</h4>
+                     <input type="text" placeholder="Amount">
+                    </div>
+
+                    <div class="form-group">
+                      <h4>Date</h4>
+                      <input type="date">
+                    </div>
+                </div>
+
+                <h4>Category</h4>
+                <select>
+                    <option value="" disabled selected>Select a Category</option>
+                    <option>Food&Dining</option>
+                    <option>Shopping</option>
+                    <option>Recharge & Bills</option>
+                    <option>Petrol & Auto</option>
+                    <option>Utilities</option>
+                    <option>Salary</option>
+                    <option>Entertainment</option>
+                    <option>Other</option>
+                </select>
+
+                <button id="submitBtn">Submit</button>
+                
+            </form>
+        </div>
+
+        
+
+        <div class="dashboard">
+            <div class="dashboard-top">
+                <h1>Financial Overview</h1>
+                <p>Real-time tracking application</p>
+            </div>
+            <div class="card1"></div>
+            <div class="card2"></div>
+            <div class="card3"></div>
+            <div class="card4"></div>
+        </div>
+
+        <div class="cash-flow">
+
+              <h1>Cash Flow Analysis</h1>
+                <div class="chart-container">
+                   <canvas id="cashFlowChart"></canvas>
+                </div>
+                
+        </div>
+
+        <div class="preference-tab">
+
+            <h1>Preferences</h1>
+            <div class="toggle">
+                <h4>Dark Mode</h4>
+                <input type="checkbox" id="darkMode">
+                <label for="darkMode"></label>
+            </div>
+            <button><i class="ri-delete-bin-fill"></i>Reset All Data</button>
+        
+        </div>
+
+        <div class="Transactions-tab">
+            <h1>All Transactions</h1>
+            <div class="transaction-text">
+            <input type="text"  placeholder="Search Transactions">
+
+             <select>
+                <option>All Types</option>
+                <option>Income Only </option>
+                <option>Expense Only</option>
+             </select>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
