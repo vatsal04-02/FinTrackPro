@@ -4,6 +4,10 @@ const cashFlow = document.querySelector(".cash-flow");
 const preference = document.querySelector(".preference-tab");
 const transactions = document.querySelector(".Transactions-tab");
 const ctx = document.getElementById("cashFlowChart");
+const addBtn = document.querySelector("#addBtn");
+const formDiv = document.querySelector(".form-div");
+const closeBtn = document.querySelector("#close");
+const submitBtn = document.querySelector("#submitBtn");
 
 new Chart(ctx, {
     type: 'line',
@@ -47,8 +51,23 @@ new Chart(ctx, {
     }
 });
 
+let TransactionsArr = [];
 
-function selectDashboard() {
+let ui =()=>{
+ function AddAndClose() {
+ addBtn.addEventListener("click",()=>{
+    formDiv.style.display = "flex";
+
+ });
+
+ closeBtn.addEventListener("click" , ()=>{
+    formDiv.style.display ="none";
+ });
+ };
+ AddAndClose();
+
+
+ function selectDashboard() {
 
     // Active button
     document.getElementById("Dashboard").classList.add("active");
@@ -62,10 +81,10 @@ function selectDashboard() {
 
     // Hide Settings
     settings.style.display = "none";
-}
+ }
 
 
-function selectSettings() {
+ function selectSettings() {
 
     // Active button
     document.getElementById("Settings").classList.add("active");
@@ -79,6 +98,10 @@ function selectSettings() {
 
     // Show Settings
     settings.style.display = "flex";
+ }
+
+ selectDashboard();
+
 }
 
-selectDashboard();
+ui();
