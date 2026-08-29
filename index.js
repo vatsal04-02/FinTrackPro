@@ -1,27 +1,9 @@
-const addBtn = document.querySelector("#addBtn");
-const formDiv = document.querySelector(".form-div");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.querySelector("#close");
-const ctx = document.getElementById('cashFlowChart');
 const settings = document.querySelector(".settings-tab");
-
-
-
-let Form_button_Functions = ()=>{
-    addBtn.addEventListener("click", ()=>{
-    formDiv.style.display ="flex";
-    overlay.style.display ="flex";
-    });
-
-    closeBtn.addEventListener("click", ()=>{
-
-    formDiv.style.display ="none";
-    overlay.style.display ="none";
-
-    });
-};
-
-Form_button_Functions();
+const dashboard = document.querySelector(".dashboard");
+const cashFlow = document.querySelector(".cash-flow");
+const preference = document.querySelector(".preference-tab");
+const transactions = document.querySelector(".Transactions-tab");
+const ctx = document.getElementById("cashFlowChart");
 
 new Chart(ctx, {
     type: 'line',
@@ -65,14 +47,38 @@ new Chart(ctx, {
     }
 });
 
+
 function selectDashboard() {
+
+    // Active button
     document.getElementById("Dashboard").classList.add("active");
     document.getElementById("Settings").classList.remove("active");
-    settings.style.display ="none";
+
+    // Show Dashboard
+    dashboard.style.display = "grid";
+    cashFlow.style.display = "flex";
+    preference.style.display = "flex";
+    transactions.style.display = "flex";
+
+    // Hide Settings
+    settings.style.display = "none";
 }
 
+
 function selectSettings() {
+
+    // Active button
     document.getElementById("Settings").classList.add("active");
     document.getElementById("Dashboard").classList.remove("active");
-    settings.style.display ="flex";
+
+    // Hide Dashboard
+    dashboard.style.display = "none";
+    cashFlow.style.display = "none";
+    preference.style.display = "none";
+    transactions.style.display = "none";
+
+    // Show Settings
+    settings.style.display = "flex";
 }
+
+selectDashboard();
