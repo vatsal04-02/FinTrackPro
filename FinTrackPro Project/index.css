@@ -1,0 +1,280 @@
+
+@font-face {
+    font-family: font1;
+    src: url(./Inter-VariableFont_opsz\,wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #111827;
+}
+
+.navbar{
+    height: 70px;
+    background-color: #1F2937;
+    border-bottom: 1px solid #374151;
+}
+
+.navbar nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+    padding: 20px;
+    margin-right: 20px;
+    
+}
+
+.navbar h2{
+    font-size: 13px;
+    font-family: font1;
+    color: white;
+}
+
+.navbar button{
+ 
+    height: 30px;
+    width: 100px;
+    border: 1px solid white;
+    background-color: #1F2937;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: font1;
+    cursor: pointer;
+    
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background-color: #1F2937;
+    border-right: 1px solid #374151;
+   
+}
+
+.side {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    font-family: font1;
+    font-size: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    gap: 10px;
+
+}
+
+.logo img{
+    height: 30px;
+    color: white;
+}
+
+.logo-text p{
+    color: #949699;
+    font-size: 12px;
+}
+
+
+.components{
+    font-family: font1;
+    font-size: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px;
+}
+
+.transaction {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.transaction button{
+    padding: 10px;
+    font-size: 15px;
+    background-color: #3B82F6;
+    color: white;
+    width: 220px;
+    height: 40px;
+    font-family: font1;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    height: 500px;
+    width: 500px;
+    padding: 30px;
+
+    color: white;
+    background-color: #1f2937;
+
+    border: 1px solid #374151;
+    border-radius: 12px;
+
+    z-index: 1000;
+
+    display: none;
+       
+
+
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.559);
+    z-index: 999;
+    display: none;
+}
+
+.form-div form{
+    width: 100%;
+    
+  
+}
+
+.form-div h4{
+    margin: 15px 0 6px;
+    font-family: font1;
+}
+
+.form-div input,
+.form-div select{
+    width: 100%;
+    height: 40px;
+    padding: 8px 10px;
+
+    border: 1px solid #374151;
+    border-radius: 6px;
+
+    background-color: #111827;
+    color: white;
+
+    font-family: font1;
+}
+
+.sidebyside {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group h4 {
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+#submitBtn{
+    margin-top: 60px;
+    margin-left: 100px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #3B82F6;
+    color: white;
+    width: 220px;
+    height: 40px;
+    font-family: font1;
+    border:none;
+    border-radius: 10px;
+}
+
+
+.form-div .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    font-family: font1;
+    
+}
+
+.top #head {
+    font-size: 20px;
+    margin: 0;
+    
+    
+}
+
+.top #close {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+.dashboard {
+
+    margin-left: 280px;
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    gap: 20px;
+    
+    padding: 10px;
+  
+
+    
+   
+}
+
+.card1,.card2,.card3,.card4{
+    margin-top: 10px;
+    height: 150px;
+    background-color: #1F2937; 
+    border-radius: 10px;
+    border: 1px solid #434344;
+   
+
+}
+
+.dashboard-top {
+    grid-column: 1 / -1;
+    font-family: font1;
+    color:white;
+  
+}
+
+.dashboard-top h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.dashboard-top p{
+    color: #949699;
+    font-size: 12px;
+}
