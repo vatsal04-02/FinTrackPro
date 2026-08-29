@@ -182,11 +182,72 @@ main {
 .card2,
 .card3,
 .card4 {
-  height: 150px;
+  height: 185px;
   min-width: 0;
-  background: var(--panel);
-  border: 1px solid #434344;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 16px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
   border-radius: 10px;
+  font-size: 20px;
+}
+
+.balance-icon,
+.transaction-icon {
+  background-color: #364154;
+  color: #4d9cff;
+}
+
+.income-icon {
+  background-color: #d9fbe7;
+  color: #087a38;
+}
+
+.expense-icon {
+  background-color: #ffe0e0;
+  color: #b91c1c;
+}
+
+.card1 p,
+.card2 p,
+.card3 p,
+.card4 p {
+  margin-top: 15px;
+  color: #aab6c8;
+  font-size: 15px;
+}
+
+.card1 h1,
+.card2 h1,
+.card3 h1,
+.card4 h1 {
+  margin-top: -8px;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card2 h1 {
+  color: #087a38;
+}
+
+.card3 h1 {
+  color: #b91c1c;
 }
 
 /* Cash Flow + Preferences */

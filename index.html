@@ -95,16 +95,45 @@
     </div>
 
     <div class="app-content">
+      
       <section class="dashboard">
         <div class="dashboard-top">
           <h1>Financial Overview</h1>
           <p>Real-time tracking application</p>
         </div>
 
-        <div class="card1"></div>
-        <div class="card2"></div>
-        <div class="card3"></div>
-        <div class="card4"></div>
+        <div class="card1">
+          <div class="card-icon balance-icon">
+            <i class="ri-bank-line"></i>
+          </div>
+          <p>Current Balance</p>
+          <h1 id="balance">$0.00</h1>
+        </div>
+
+        <div class="card2">
+          <div class="card-icon income-icon">
+            <i class="ri-arrow-right-up-line"></i>
+          </div>
+          <p>Total Income</p>
+          <h1 id="income">$0.00</h1>
+        </div>
+
+        <div class="card3">
+          <div class="card-icon expense-icon">
+           <i class="ri-arrow-right-down-line"></i>
+          </div>
+          <p>Total Expense</p>
+          <h1 id="expense">$0.00</h1>
+        </div>
+
+        <div class="card4">
+          <div class="card-icon transaction-icon">
+           <i class="ri-piggy-bank-line"></i>
+          </div>
+          <p>Total Transactions</p>
+          <h1 id="transactionCount">0</h1>
+        </div>
+
       </section>
 
       <section class="dashboard-middle">
