@@ -294,6 +294,7 @@ main {
 
 .preference-tab {
   min-height: 200px;
+  min-width: 400px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -486,6 +487,7 @@ main {
   background: var(--blue);
   color: white;
   font-family: font1;
+  cursor: pointer;
 }
 
 /* Settings */

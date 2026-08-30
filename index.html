@@ -23,12 +23,12 @@
         </div>
 
         <div class="components">
-          <h1 id="Dashboard" class="active" onclick="selectDashboard()">
+          <h1 id="Dashboard" class="active" >
             <i class="ri-layout-grid-line"></i>
             Dashboard
           </h1>
 
-          <h1 id="Settings" onclick="selectSettings()">
+          <h1 id="Settings" >
             <i class="ri-settings-2-line"></i>
             Settings
           </h1>
@@ -50,35 +50,35 @@
     <div class="overlay"></div>
 
     <div class="form-div">
-      <form>
+      <form id="Transaction-form">
         <div class="top">
           <h1 id="head">Add Transaction</h1>
           <h1 id="close">×</h1>
         </div>
 
         <h4>Type</h4>
-        <select>
+        <select name="type">
           <option>Income</option>
           <option>Expense</option>
         </select>
 
         <h4>Description</h4>
-        <input type="text" placeholder="Description">
+        <input type="text" placeholder="Description" name="description">
 
         <div class="sidebyside">
           <div class="form-group">
             <h4>Amount</h4>
-            <input type="text" placeholder="Amount">
+            <input type="text" placeholder="Amount" name="amount">
           </div>
 
           <div class="form-group">
             <h4>Date</h4>
-            <input type="date">
+            <input type="date" name="date">
           </div>
         </div>
 
         <h4>Category</h4>
-        <select>
+        <select name="category">
           <option value="" disabled selected>Select a Category</option>
           <option>Food & Dining</option>
           <option>Shopping</option>
@@ -90,7 +90,7 @@
           <option>Other</option>
         </select>
 
-        <button id="submitBtn">Submit</button>
+        <button id="submitBtn" type="submit">Submit</button>
       </form>
     </div>
 
@@ -181,6 +181,9 @@
           <div><h4>AMOUNT</h4></div>
           <div><h4>ACTIONS</h4></div>
         </div>
+
+        <div class="transaction-list"></div>
+
       </section>
     </div>
 
