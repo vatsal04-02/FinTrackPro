@@ -290,6 +290,30 @@ logoutBtn.addEventListener("click",()=>{
     loginPage.style.display = "grid";
 })
 
+//Dark mode toggle
+
+const darkModeToggle = document.querySelector("#darkMode");
+
+function setTheme(isDark) {
+  document.body.classList.toggle("light-mode", !isDark);
+
+  darkModeToggle.checked = isDark;
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+  setTheme(false);
+} else {
+  setTheme(true);
+}
+
+darkModeToggle.addEventListener("change", () => {
+  setTheme(darkModeToggle.checked);
+});
+
 
 
 

@@ -941,3 +941,95 @@ main {
   cursor: pointer;
 
 }
+
+Soft light theme
+
+body.light-mode,
+body.light-mode main {
+  background-color: #cfd8e3;
+  color: #1e293b;
+}
+
+body.light-mode .sidebar {
+  background-color: #dce3ec;
+  border-color: #aebccc;
+}
+
+body.light-mode .navbar {
+  background-color: #dce3ec;
+  border-color: #aebccc;
+}
+
+body.light-mode .card1,
+body.light-mode .card2,
+body.light-mode .card3,
+body.light-mode .card4,
+body.light-mode .cash-flow,
+body.light-mode .preference-tab,
+body.light-mode .Transactions-tab,
+body.light-mode .profile-details,
+body.light-mode .form-div {
+  background-color: #e7edf4;
+  border-color: #b7c3d1;
+}
+
+body.light-mode .settings-tab {
+  background-color: #cfd8e3;
+  color: #1e293b;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h4,
+body.light-mode .transaction-row {
+  color: #1e293b;
+}
+
+body.light-mode p,
+body.light-mode .dashboard-top p,
+body.light-mode .settings-top p,
+body.light-mode .logo-text p,
+body.light-mode .filters h4 {
+  color: #52657d;
+}
+
+body.light-mode .chart-container {
+  background-color: #dbe3ec;
+}
+
+body.light-mode .search-box,
+body.light-mode .transaction-text input,
+body.light-mode .transaction-text select,
+body.light-mode .form-div input,
+body.light-mode .form-div select,
+body.light-mode .profile-fields input,
+body.light-mode .profile-fields select {
+  background-color: #f1f4f8;
+  color: #1e293b;
+  border-color: #aebccc;
+}
+
+body.light-mode .navbar button {
+  background-color: #e7edf4;
+  color: #1e293b;
+  border-color: #aebccc;
+}
+
+body.light-mode .category-tag {
+  background-color: #ccd6e2;
+  color: #1e293b;
+}
+
+body.light-mode .filters,
+body.light-mode .transaction-row {
+  border-color: #b7c3d1;
+}
+
+body.light-mode .components h1 {
+  color: #334155;
+}
+
+body.light-mode .components h1.active {
+  background-color: #b9c7da;
+  color: #2563eb;
+}
