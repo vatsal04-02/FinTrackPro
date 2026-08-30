@@ -365,6 +365,7 @@ main {
 
 .Transactions-tab {
   min-width: 0;
+  max-width: 1050px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -400,9 +401,10 @@ main {
 }
 
 .filters {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  left: 0;
   padding-top: 14px;
   border-top: 1px solid #434344;
   color: white;
@@ -701,4 +703,61 @@ main {
   .profile-fields + .profile-fields {
     margin: 15px 0 0;
   }
+}
+
+.transaction-list {
+  width: 100%;
+}
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 20px 10px;
+  border-bottom: 1px solid #374151;
+  color: white;
+}
+
+.transaction-row p {
+  font-size: 16px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 6px 10px;
+
+  background-color: #111827;
+  border-radius: 5px;
+
+  font-size: 14px;
+  color: white;
+}
+
+.income {
+  color: #16a34a;
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.expense {
+  color: #dc2626;
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.action-icons #editBtn{
+  background-color: transparent;
+  border: none;
+  color: green;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.action-icons #dltBtn{
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
 }

@@ -14,6 +14,8 @@ const settingsButton = document.getElementById("Settings");
 const formSubmitBtn = document.querySelector("#submitBtn");
 const form = document.querySelector("#Transaction-form");
 
+const transactionList = document.querySelector(".transaction-list");
+
 
 let TransactionsArr = [];
 
@@ -119,8 +121,30 @@ form.addEventListener("submit",(event)=>{
   TransactionsArr.push(transaction);
   console.log(TransactionsArr);
 
+  addTransactionToUI(transaction);
+
+  form.reset();
+  formDiv.style.display = "none";
+
 
 });
 
+// ui creation for transaction
 
+function addTransactionToUI(transaction) {
+  transactionList.innerHTML += `
+    <div class="transaction-row">
+      <p>${transaction.date}</p>
+      <p>${transaction.description}</p>
+      <p><span class="category-tag">${transaction.category}</span></p>
+      <p class="${transaction.type === "Income" ? "income" : "expense"}">
+        ${transaction.type === "Income" ? "+" : "-"}$${transaction.amount}
+      </p>
+      <div class="action-icons">
+        <button id="editBtn"><i class="ri-pencil-fill edit-icon"></i></button>
+        <button id="dltBtn"><i class="ri-delete-bin-fill delete-icon"></i></button>
+      </div>
+    </div>
+  `;
+}
 
