@@ -761,3 +761,14 @@ main {
   font-size: 20px;
   cursor: pointer;
 }
+
+#profileBtn{
+  height: 40px;
+  width: 100px;
+  background-color:#39475a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+}

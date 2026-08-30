@@ -16,8 +16,17 @@ const form = document.querySelector("#Transaction-form");
 
 const transactionList = document.querySelector(".transaction-list");
 
+const profileName = document.querySelector("#Name");
+const Currency = document.querySelector("#currency");
+
+const profileBtn = document.querySelector("#profileBtn");
+const usernameNav = document.querySelector("#Username");
+
+
 
 let TransactionsArr = [];
+
+
 
 /* Cash Flow Chart */
 
@@ -104,10 +113,32 @@ settingsButton.addEventListener("click", () => {
 
 selectPage("dashboard");
 
+//settings profile updation 
+
+profileBtn.addEventListener("click", ()=>{
+    let profile = {
+     name: profileName.value,
+     currency: Currency.value
+    };
+    console.log(profile);
+
+    usernameNav.innerText = profileName.value;
+
+})
+
 //Form submit button
 
 form.addEventListener("submit",(event)=>{
     event.preventDefault();
+
+
+    const description = form.description.value.trim();
+    const amount = form.amount.value.trim();
+
+    if(description ==="" || amount === ""){
+        alert("please fill all fields");
+        return;
+    } 
 
     const transaction = {
     id:Date.now(),
@@ -147,4 +178,6 @@ function addTransactionToUI(transaction) {
     </div>
   `;
 }
+
+
 

@@ -42,7 +42,7 @@
 
     <header class="navbar">
       <nav class="topbar">
-        <h2>Username</h2>
+        <h2 id="Username">Username</h2>
         <button><i class="ri-logout-box-r-line"></i> Logout</button>
       </nav>
     </header>
@@ -57,28 +57,28 @@
         </div>
 
         <h4>Type</h4>
-        <select name="type">
+        <select name="type" required>
           <option>Income</option>
           <option>Expense</option>
         </select>
 
         <h4>Description</h4>
-        <input type="text" placeholder="Description" name="description">
+        <input required type="text" placeholder="Description" name="description">
 
         <div class="sidebyside">
           <div class="form-group">
             <h4>Amount</h4>
-            <input type="text" placeholder="Amount" name="amount">
+            <input required type="text" placeholder="Amount" name="amount">
           </div>
 
           <div class="form-group">
             <h4>Date</h4>
-            <input type="date" name="date">
+            <input required type="date" name="date">
           </div>
         </div>
 
         <h4>Category</h4>
-        <select name="category">
+        <select name="category" required>
           <option value="" disabled selected>Select a Category</option>
           <option>Food & Dining</option>
           <option>Shopping</option>
@@ -198,13 +198,13 @@
 
         <div class="profile-fields">
           <h4>Full Name</h4>
-          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Name" id="Name">
         </div>
 
         <div class="profile-fields">
           <h4>Primary Currency</h4>
 
-          <select>
+          <select id="currency">
             <option>USD ($)</option>
             <option>EUR (€)</option>
             <option>GBP (£)</option>
@@ -212,6 +212,8 @@
             <option>JPY (¥)</option>
           </select>
         </div>
+
+        <button id="profileBtn">Submit</button>
       </div>
     </section>
   </main>
