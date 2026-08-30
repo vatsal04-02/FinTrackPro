@@ -21,6 +21,11 @@ const Currency = document.querySelector("#currency");
 
 const profileBtn = document.querySelector("#profileBtn");
 const usernameNav = document.querySelector("#Username");
+const loginPage = document.querySelector(".login-page");
+const signupPage = document.querySelector(".signup-page");
+
+const signupBtn = document.querySelector("#showSignup");
+const loginBtn = document.querySelector("#showLogin");
 
 
 
@@ -189,7 +194,21 @@ function addTransactionToUI(transaction) {
       </div>
     </div>
   `;
-}
+};
+
+// login and signup navigation 
+
+signupBtn.addEventListener("click" ,()=>{
+    signupPage.style.display ="grid"
+    loginPage.style.display = "none"
+})
+
+loginBtn.addEventListener("click", () => {
+  loginPage.style.display = "grid";
+  signupPage.style.display = "none";
+});
+
+
 
 
 

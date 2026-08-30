@@ -34,6 +34,175 @@ main {
   color: white;
 }
 
+.login-page,
+.signup-page {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+  background-color: #111827;
+}
+
+/* Login shows first */
+.login-page {
+  display: grid;
+}
+
+/* Sign-up is shown later using JavaScript */
+.signup-page {
+  display: none;
+}
+
+.login-card,
+.signup-card {
+  width: min(100%, 430px);
+  padding: 36px;
+
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.login-logo,
+.signup-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 32px;
+}
+
+.login-logo > i,
+.signup-logo > i {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  background-color: #364154;
+  border-radius: 12px;
+
+  color: #4d9cff;
+  font-size: 24px;
+}
+
+.login-logo h1,
+.signup-logo h1 {
+  color: white;
+  font-size: 21px;
+}
+
+.login-logo p,
+.signup-logo p,
+.login-form > p,
+.signup-form > p {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2,
+.signup-form h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.login-form label,
+.signup-form label {
+  margin: 20px 0 7px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-form input,
+.signup-form input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+
+  outline: none;
+  border: 1px solid #374151;
+  border-radius: 8px;
+
+  background-color: #111827;
+  color: white;
+
+  font-family: font1;
+}
+
+.login-form input:focus,
+.signup-form input:focus {
+  border-color: #3b82f6;
+}
+
+.login-form > button,
+.signup-form > button {
+  height: 44px;
+  margin-top: 26px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #3b82f6;
+  color: white;
+
+  font-family: font1;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.login-form > button:hover,
+.signup-form > button:hover {
+  background-color: #2563eb;
+}
+
+.login-switch,
+.signup-switch {
+  margin-top: 20px !important;
+  text-align: center;
+}
+
+.login-switch button,
+.signup-switch button {
+  border: none;
+  background: transparent;
+
+  color: #4d9cff;
+  font-family: font1;
+
+  cursor: pointer;
+}
+
+.login-switch button:hover,
+.signup-switch button:hover {
+  color: #7db3ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-card,
+  .signup-card {
+    padding: 28px 22px;
+  }
+}
+
+
 /* Sidebar */
 
 .sidebar {
