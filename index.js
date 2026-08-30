@@ -26,6 +26,11 @@ const usernameNav = document.querySelector("#Username");
 
 let TransactionsArr = [];
 
+let profile = { 
+     name: profileName.value,
+     currency: Currency.value
+    };
+
 
 
 /* Cash Flow Chart */
@@ -113,18 +118,25 @@ settingsButton.addEventListener("click", () => {
 
 selectPage("dashboard");
 
-//settings profile updation 
+//settings profile updation
 
-profileBtn.addEventListener("click", ()=>{
-    let profile = {
-     name: profileName.value,
-     currency: Currency.value
+
+
+profileBtn.addEventListener("click", ()=>{ 
+
+    profile = {
+    name: profileName.value.trim(),
+    currency: Currency.value
     };
+    
     console.log(profile);
 
-    usernameNav.innerText = profileName.value;
+    usernameNav.innerText = profile.name;
+    
 
 })
+
+
 
 //Form submit button
 
@@ -169,7 +181,7 @@ function addTransactionToUI(transaction) {
       <p>${transaction.description}</p>
       <p><span class="category-tag">${transaction.category}</span></p>
       <p class="${transaction.type === "Income" ? "income" : "expense"}">
-        ${transaction.type === "Income" ? "+" : "-"}$${transaction.amount}
+        ${transaction.type === "Income" ? "+" : "-"}${profile.currency}${transaction.amount}
       </p>
       <div class="action-icons">
         <button id="editBtn"><i class="ri-pencil-fill edit-icon"></i></button>
